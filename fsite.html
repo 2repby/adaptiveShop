@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Адаптивность</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0 auto;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            font-family: Arial, sans-serif;
+            max-width: 1100px;
+            /*width: 1100px;*/
+        }
+
+        .header {
+            background: PaleGoldenRod;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 auto;
+        }
+
+        .menuitem {
+            color: white;
+            /*display: inline-block;*/
+            background: BurlyWood;
+            padding: 10px;
+            /*margin: -2px;*/
+            font-size: 18px;
+            text-align: center;
+
+        }
+
+        .col {
+            width: 25%;
+        }
+
+        .main {
+            /*padding: 20px;*/
+            background: Wheat;
+            display: flex;
+            flex-direction: row;
+        }
+
+        @media (max-device-width: 800px) {
+            .col {
+                width: 50%;
+                /*background: blue;*/
+            }
+            .main {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-device-width: 400px) {
+            .col {
+                width: 100%;
+                /*background: yellow;*/
+            }
+        }
+
+        .content{
+            flex-direction: column;
+        }
+
+        .submenu {
+            background: Beige;
+            text-align: center;
+            width: 100%;
+            /*display: inline-block;*/
+        }
+
+        .submenuitem {
+            background: Wheat;
+            padding: 10px;
+            margin: 20px 20px;
+
+        }
+
+
+
+        .post {
+            display: inline-block;
+            padding: 20px;
+            width: 100%;
+            flex-direction: column;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+
+        <!--    <img src="uploads/file528900.png" width="120" height="120" alt="Logo"/>-->
+        <div id="item1" class="menuitem col">Категория1</div>
+        <div id="item2" class="menuitem col">Категория2</div>
+        <div id="item3" class="menuitem col">Категория3</div>
+        <div id="item4" class="menuitem col">Категория4</div>
+
+    </div>
+
+
+    <div class="main xxx">
+        <div class="submenu">
+            <div id="item1-1" class="submenuitem">Объект1</div>
+            <div id="item1-2" class="submenuitem">Объект2</div>
+            <div id="item1-3" class="submenuitem">Объект3</div>
+        </div>
+        <div class="content">
+        <div class="post">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.
+        </div>
+        <div class="post">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.
+        </div>
+        <div class="post">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.
+        </div>
+        <div class="post">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.
+        </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
