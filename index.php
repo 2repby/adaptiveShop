@@ -16,7 +16,7 @@
         <!--    <img src="uploads/file528900.png" width="120" height="120" alt="Logo"/>-->
         <div id="item1" class="menuitem col"><a href="index.php?page=items">Товары</a></div>
         <div id="item4" class="menuitem col"><a href="index.php?page=basket">Корзина</a></div>
-        <div id="item2" class="menuitem col">Категория2</div>
+        <div id="item2" class="menuitem col"><a href="index.php?page=purchase">Заказы</a></div>
         <div id="item3" class="menuitem col">
             <?php
             if (isset($_SESSION['username']))
@@ -48,6 +48,9 @@
                     break;
                 case 'basket':
                     require ('basket.php');
+                    break;
+                case 'purchase':
+                    require ('purchase.php');
                     break;
                 case 'login':
                     require ('login.php');

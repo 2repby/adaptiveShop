@@ -17,6 +17,6 @@
         $result = $conn->query("INSERT INTO item_purchase (id_item, id_purchase, quantity) VALUES (".$item_id.",".$order_id.",".$_SESSION['basket'][$item_id].")");
     }
     $_SESSION['basket'] = [];
-    header("Location: index.php?page=basket");
+    header("Location: index.php?page=purchase");
     die();
 ?>

@@ -7,7 +7,7 @@ if ($_SESSION['basket'] != []) {
         ?>
 
 
-        <div class="post">
+        <div class="item">
             <div class="item-prop">Код товара: <?= $row['ci'] ?></div>
             <div class="item-prop">Наименование: <?= $row['name'] ?> </div>
             <div class="item-prop">Цена: <?= $row['price'] ?></div>
