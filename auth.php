@@ -32,6 +32,7 @@ if (isset($_POST['login'])){
 if ($_GET['logout'] == 1){
 //    session_unset();
     unset($_SESSION['username']);
+    unset($_SESSION['is_admin']);
     $_SESSION['message'] = 'Вы успешно вышли из сиситемы';
     header("Location: index.php");
     die();
