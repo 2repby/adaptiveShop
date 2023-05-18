@@ -9,6 +9,7 @@ if (isset($_POST['login'])){
         if (MD5($_POST["password"]) == $row['password']){
             $_SESSION['username'] = $_POST['login'];
             $_SESSION['user_id'] = $row['id'];
+            $_SESSION['is_admin'] = $row['is_admin'];
             $_SESSION['message'] = 'Вы успешно вошли в сиситему';
             header("Location: index.php");
             die();

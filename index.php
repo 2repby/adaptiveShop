@@ -35,9 +35,17 @@
 
     <div class="main xxx">
         <div class="submenu">
-            <div id="item1-1" class="submenuitem">Объект1</div>
-            <div id="item1-2" class="submenuitem">Объект2</div>
-            <div id="item1-3" class="submenuitem">Объект3</div>
+            <?php
+            $result = $conn->query("SELECT * FROM categories");
+            while ($row = $result->fetch()) {
+            ?>
+
+
+            <div id="item1-1" class="submenuitem"><a href='index.php?page=items&cat=<?=$row['id']?>'><?=$row['name']?></a></div>
+
+            <?php
+            }
+            ?>
         </div>
         <div class="content">
             <?
@@ -54,6 +62,9 @@
                     break;
                 case 'login':
                     require ('login.php');
+                    break;
+                case 'itemform':
+                    require ('itemform.php');
                     break;
 
             }
